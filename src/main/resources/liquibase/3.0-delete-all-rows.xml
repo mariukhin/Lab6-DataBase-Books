@@ -6,14 +6,13 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
         logicalFilePath="4.0-delete_all_rows.xml">
-    <changeSet id="delete_all_rows" author="max">
+    <changeSet id="delete_all_rows" author="maryuhin.z@gmail.com">
         <sql>
-            DELETE FROM UsersH;
-            DELETE FROM NotificationsH;
-            DELETE FROM UserMessagesH;
-            DELETE FROM UsersChatsH;
-            DELETE FROM ChatsH;
-            DELETE FROM NewsH;
+            DELETE FROM AuthorH;
+            DELETE FROM BookH;
+            DELETE FROM CostH;
+            DELETE FROM EditionH;
+            DELETE FROM ScreenAdaptationH;
         </sql>
     </changeSet>
 </databaseChangeLog>

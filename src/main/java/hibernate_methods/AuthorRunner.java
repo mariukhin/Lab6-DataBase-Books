@@ -49,7 +49,6 @@ public class AuthorRunner {
         session.close();
     }
 
-    wfqwefwefwe
     public List listAuthors() {
         Session session = this.sessionFactory.openSession();
         Transaction transaction = null;

@@ -48,7 +48,6 @@ public class CostRunner {
         transaction.commit();
         session.close();
     }
-    rgregreg
     public List listCost() {
         Session session = this.sessionFactory.openSession();
         Transaction transaction = null;

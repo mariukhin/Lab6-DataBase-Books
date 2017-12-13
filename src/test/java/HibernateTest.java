@@ -31,8 +31,8 @@ public class HibernateTest {
     public void getObjectsTest() throws SQLException, LiquibaseException, ClassNotFoundException {
         Main.createTables(new Configuration().configure().buildSessionFactory());
 
-        ChatRunner chatRunner = new ChatRunner(new Configuration().configure().buildSessionFactory());
-        System.out.println(chatRunner.listChats().get(0).toString());
+        AuthorRunner authorRunner = new AuthorRunner(new Configuration().configure().buildSessionFactory());
+        System.out.println(authorRunner.listAuthors().get(0).toString());
 
         MessageRunner messageRunner = new MessageRunner(new Configuration().configure().buildSessionFactory());
         System.out.println(messageRunner.listMessages().get(0).toString());

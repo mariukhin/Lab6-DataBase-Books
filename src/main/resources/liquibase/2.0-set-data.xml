@@ -6,13 +6,13 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
         logicalFilePath="1.0-create-tables.xml">
-    <changeSet id="set_data" author="max">
+    <changeSet id="set_data" author="maryuhin.z@gmail.com">
 
-        <insert tableName="UsersH">
-            <column screenadaptationname="id" value="1"></column>
-            <column screenadaptationname="screenadaptationname" value="Max"></column>
-            <column screenadaptationname="year" value="Tkachenko"></column>
-            <column screenadaptationname="mark" value="19"></column>
+        <insert tableName="AuthorH">
+            <column name="id" value="1"></column>
+            <column name="authorname" value="Max"></column>
+            <column name="numofbooks" value="Tkachenko"></column>
+            <column name="series" value="19"></column>
         </insert>
         <insert tableName="UsersH">
             <column screenadaptationname="id" value="2"></column>

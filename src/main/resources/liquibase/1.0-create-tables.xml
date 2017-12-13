@@ -8,56 +8,50 @@
         logicalFilePath="1.0-create-tables.xml">
     <changeSet id="create_tables" author="max">
         <sql>
-            CREATE TABLE UsersH
+            CREATE TABLE hibernate."AuthorH"
             (
-            id INT NOT NULL,
-            screenadaptationname TEXT DEFAULT NULL,
-            year TEXT DEFAULT NULL,
-            mark INT DEFAULT NULL,
-            PRIMARY KEY(id)
+            Id integer NOT NULL,
+            "authorname" character varying NOT NULL,
+            "numofbooks" integer,
+            "series" integer NOT NULL,
+            CONSTRAINT "author_pkey" PRIMARY KEY (Id)
             );
 
-            CREATE TABLE ChatsH
+            CREATE TABLE hibernate."BookH"
             (
-            id INT NOT NULL,
-            screenadaptationname TEXT DEFAULT NULL,
-            dateOfCreating DATE DEFAULT NULL,
-            PRIMARY KEY(id)
+            Id integer NOT NULL,
+            "bookname" character varying NOT NULL,
+            "dateofpublication" integer NOT NULL,
+            "authorId" integer REFERENCES "author"(Id) NOT NULL,
+            CONSTRAINT "book_pkey" PRIMARY KEY (Id)
             );
 
-            CREATE TABLE UsersChatsH
+            CREATE TABLE hibernate."CostH"
             (
-            id INT NOT NULL,
-            userId INT NOT NULL REFERENCES UsersH.id,
-            editionId INT NOT NULL REFERENCES ChatsH.id,
-            PRIMARY KEY(id)
+            Id integer NOT NULL,
+            "number" integer NOT NULL,
+            "high" integer NOT NULL,
+            CONSTRAINT "cost_pkey" PRIMARY KEY (Id)
             );
 
-            CREATE TABLE NotificationsH
+            CREATE TABLE hibernate."EditionH"
             (
-            id INT NOT NULL,
-            userId INT NOT NULL REFERENCES UsersH.id,
-            high TEXT DEFAULT NULL,
-            PRIMARY KEY(id)
+            Id integer NOT NULL,
+            "editionname" character varying NOT NULL,
+            "numofcopies" integer NOT NULL,
+            "bookId" integer REFERENCES "book"(Id) NOT NULL,
+            "costId" integer REFERENCES "cost"(Id) NOT NULL,
+            CONSTRAINT "edition_pkey" PRIMARY KEY (Id)
             );
 
-            CREATE TABLE UserMessagesH
+            CREATE TABLE hibernate."ScreenAdaptationH"
             (
-            id INT NOT NULL,
-            userId INT NOT NULL REFERENCES UsersH.id,
-            editionId INT NOT NULL REFERENCES ChatsH.id,
-            departureDate TIMESTAMP NOT NULL,
-            high TEXT DEFAULT NULL,
-            PRIMARY KEY(id)
-            );
-
-            CREATE TABLE NewsH
-            (
-            id INT NOT NULL,
-            editionId INT NOT NULL REFERENCES ChatsH.id,
-            dateOfCreating TIMESTAMP NOT NULL,
-            high TEXT DEFAULT NULL,
-            PRIMARY KEY(id)
+            Id bigint NOT NULL,
+            "screenadaptationname" character varying  NOT NULL,
+            "year" integer NOT NULL,
+            "mark" integer NOT NULL,
+            "bookId" bigint REFERENCES "book"(Id) NOT NULL,
+            CONSTRAINT "screenadaptation_pkey" PRIMARY KEY (Id)
             );
         </sql>
     </changeSet>
