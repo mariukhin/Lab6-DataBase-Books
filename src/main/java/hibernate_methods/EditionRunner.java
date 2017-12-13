@@ -18,7 +18,7 @@ public class EditionRunner {
     public void addEdition(int id, int bookId, int costId,String editionname, int numOfCopies) {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
-
+         xcvxcv
         transaction = session.beginTransaction();
         Edition edition = new Edition(id, bookId, costId, editionname, numOfCopies);
         session.save(edition);
@@ -29,7 +29,7 @@ public class EditionRunner {
     public void updateEdition(int id, String editionname) {
         Session session = this.sessionFactory.openSession();
         Transaction transaction = null;
-
+        sdvsdv
         transaction = session.beginTransaction();
         Edition edition = (Edition) session.get(Edition.class, id);
         edition.setEditionname(editionname);
@@ -48,7 +48,7 @@ public class EditionRunner {
         transaction.commit();
         session.close();
     }
-
+    dsvsdv
     public List listEditions() {
         Session session = this.sessionFactory.openSession();
         Transaction transaction = null;

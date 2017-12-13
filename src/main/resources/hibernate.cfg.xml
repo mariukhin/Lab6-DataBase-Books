@@ -24,7 +24,7 @@
         <mapping resource="hibernate/Author.hbm.xml"/>
         <mapping resource="hibernate/Book.hbm.xml"/>
         <mapping resource="hibernate/Cost.hbm.xml"/>
-        <mapping resource="hibernate/Notification.hbm.xml"/>
+        <mapping resource="hibernate/Edition.hbm.xml"/>
         <mapping resource="hibernate/User.hbm.xml"/>
         <mapping resource="hibernate/UsersChats.hbm.xml"/>
 

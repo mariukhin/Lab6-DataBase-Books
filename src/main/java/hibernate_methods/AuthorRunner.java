@@ -25,7 +25,7 @@ public class AuthorRunner {
         transaction.commit();
         session.close();
     }
-
+    csdc
     public void updateAuthor(int id, String name) {
         Session session = this.sessionFactory.openSession();
         Transaction transaction = null;
@@ -49,6 +49,7 @@ public class AuthorRunner {
         session.close();
     }
 
+    wfqwefwefwe
     public List listAuthors() {
         Session session = this.sessionFactory.openSession();
         Transaction transaction = null;

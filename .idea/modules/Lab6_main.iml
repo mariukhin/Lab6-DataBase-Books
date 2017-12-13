@@ -38,5 +38,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="hibernate-core-3.3.0.CR1" level="project" />
+    <orderEntry type="library" name="liquibase" level="project" />
+    <orderEntry type="library" name="postgresql-42.1.4" level="project" />
   </component>
 </module>

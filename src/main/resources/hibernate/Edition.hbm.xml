@@ -3,13 +3,14 @@
         "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="items.Cost" table="CostH">
+    <class name="items.Edition" table="EditionH">
         <meta attribute="class-description">
             This class contains developer's details.
         </meta>
         <id name="id" type="int" column="id"/>
-        <property name="editionId" column="editionId" type="int"/>
-        <property name="num" column="num" type="int"/>
-        <property name="high" column="high" type="int"/>
+        <property name="bookId" column="bookId" type="int"/>
+        <property name="costId" column="costId" type="int"/>
+        <property name="editionname" column="name" type="string"/>
+        <property name="numOfCopies" column="numOfCopies" type="int"/>
     </class>
 </hibernate-mapping>
