@@ -25,7 +25,7 @@ public class AuthorRunner {
         transaction.commit();
         session.close();
     }
-    csdc
+
     public void updateAuthor(int id, String name) {
         Session session = this.sessionFactory.openSession();
         Transaction transaction = null;

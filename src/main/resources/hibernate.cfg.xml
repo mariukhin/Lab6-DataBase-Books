@@ -4,29 +4,28 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property screenadaptationname="hibernate.dialect">
-            org.hibernate.dialect.MySQLDialect
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect
         </property>
-        <property screenadaptationname="hibernate.connection.driver_class">
-            com.mysql.jdbc.Driver
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
         </property>
 
-        <property screenadaptationname="hibernate.connection.url">
-            jdbc:mysql://91.238.103.81/test
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://127.0.0.1:5432/Books
         </property>
-        <property screenadaptationname="hibernate.connection.username">
-            max
+        <property name="hibernate.connection.username">
+            postgres
         </property>
-        <property screenadaptationname="hibernate.connection.password">
-            max12345
+        <property name="hibernate.connection.password">
+            1234
         </property>
 
         <mapping resource="hibernate/Author.hbm.xml"/>
         <mapping resource="hibernate/Book.hbm.xml"/>
         <mapping resource="hibernate/Cost.hbm.xml"/>
         <mapping resource="hibernate/Edition.hbm.xml"/>
-        <mapping resource="hibernate/User.hbm.xml"/>
-        <mapping resource="hibernate/UsersChats.hbm.xml"/>
+        <mapping resource="hibernate/ScreenAdaptation.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>
