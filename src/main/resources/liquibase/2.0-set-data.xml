@@ -10,37 +10,60 @@
 
         <insert tableName="AuthorH">
             <column name="id" value="1"></column>
-            <column name="authorname" value="Max"></column>
-            <column name="numofbooks" value="Tkachenko"></column>
-            <column name="series" value="19"></column>
+            <column name="authorname" value="Alexandre Dumas"></column>
+            <column name="numofbooks" value="80"></column>
+            <column name="series" value="4"></column>
         </insert>
-        <insert tableName="UsersH">
-            <column screenadaptationname="id" value="2"></column>
-            <column screenadaptationname="screenadaptationname" value="Sasha"></column>
-            <column screenadaptationname="year" value="Yurchuk"></column>
-            <column screenadaptationname="mark" value="18"></column>
+        <insert tableName="AuthorH">
+            <column name="id" value="2"></column>
+            <column name="authorname" value="Thomas Mayne Reid"></column>
+            <column name="numofbooks" value="60"></column>
+            <column name="series" value="6"></column>
         </insert>
-        <insert tableName="UsersH">
-            <column screenadaptationname="id" value="3"></column>
-            <column screenadaptationname="screenadaptationname" value="Valeria"></column>
-            <column screenadaptationname="year" value="Lozovaya"></column>
-            <column screenadaptationname="mark" value="17"></column>
+        <insert tableName="AuthorH">
+            <column name="id" value="3"></column>
+            <column name="authorname" value="Strugatsky Brothers"></column>
+            <column name="numofbooks" value="24"></column>
+            <column name="series" value="5"></column>
+        </insert>
+        <insert tableName="AuthorH">
+            <column name="id" value="4"></column>
+            <column name="authorname" value="James Fenimore Cooper"></column>
+            <column name="numofbooks" value="67"></column>
+            <column name="series" value="8"></column>
         </insert>
 
-        <insert tableName="ChatsH">
-            <column screenadaptationname="id" value="1"></column>
-            <column screenadaptationname="screenadaptationname" value="KPI Chan"></column>
-            <column screenadaptationname="dateOfCreating" value="2010-05-10"></column>
+        <insert tableName="BookH">
+            <column name="id" value="1"></column>
+            <column name="bookname" value="The Count of Monte Cristo"></column>
+            <column name="dateofpublication" value="1844"></column>
+            <column name="authorId" value="1"></column>
+            <column name="editionId" value="3"></column>
+            <column name="screenadaptationId" value="2"></column>
         </insert>
-        <insert tableName="ChatsH">
-            <column screenadaptationname="id" value="2"></column>
-            <column screenadaptationname="screenadaptationname" value="KPI Live"></column>
-            <column screenadaptationname="dateOfCreating" value="2009-03-12"></column>
+        <insert tableName="BookH">
+            <column name="id" value="2"></column>
+            <column name="bookname" value="Roadside Picnic"></column>
+            <column name="dateofpublication" value="1972"></column>
+            <column name="authorId" value="3"></column>
+            <column name="editionId" value="1"></column>
+            <column name="screenadaptationId" value="1"></column>
         </insert>
-        <insert tableName="ChatsH">
-            <column screenadaptationname="id" value="3"></column>
-            <column screenadaptationname="screenadaptationname" value="FICT online"></column>
-            <column screenadaptationname="dateOfCreating" value="2013-12-24"></column>
+        <insert tableName="BookH">
+            <column name="id" value="3"></column>
+            <column name="bookname" value="The Headless Horseman"></column>
+            <column name="dateofpublication" value="1865"></column>
+            <column name="authorId" value="2"></column>
+            <column name="editionId" value="2"></column>
+            <column name="screenadaptationId" value="3"></column>
+        </insert>
+        <insert tableName="BookH">
+            <column name="id" value="4"></column>
+            <column name="bookname" value="The Last of the Mohicans"></column>
+            <column name="dateofpublication" value="1865"></column>
+            <column name="authorId" value="4"></column>
+            <column name="editionId" value="5"></column>
+            <column name="screenadaptationId" value="4"></column>
         </insert>
 
         <insert tableName="UsersChatsH">

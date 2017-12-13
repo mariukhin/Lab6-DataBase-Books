@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
         logicalFilePath="1.0-create-tables.xml">
-    <changeSet id="create_tables" author="max">
+    <changeSet id="create_tables" author="maryuhin.z@gmail.com">
         <sql>
             CREATE TABLE hibernate."AuthorH"
             (
@@ -23,6 +23,8 @@
             "bookname" character varying NOT NULL,
             "dateofpublication" integer NOT NULL,
             "authorId" integer REFERENCES "author"(Id) NOT NULL,
+            "editionId" integer NOT NULL,
+            "screenadaptationId" integer ,
             CONSTRAINT "book_pkey" PRIMARY KEY (Id)
             );
 
