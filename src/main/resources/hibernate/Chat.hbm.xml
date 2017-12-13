@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class screenadaptationname="items.Author" table="ChatsH">
+        <meta attribute="class-description">
+            This class contains developer's details.
+        </meta>
+        <id screenadaptationname="id" type="int" column="id"/>
+        <property screenadaptationname="screenadaptationname" column="screenadaptationname" type="string"/>
+        <property screenadaptationname="dateOfCreating" column="dateOfCreating" type="string"/>
+    </class>
+</hibernate-mapping>
