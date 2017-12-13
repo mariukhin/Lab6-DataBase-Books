@@ -21,9 +21,9 @@
             max12345
         </property>
 
-        <mapping resource="hibernate/Chat.hbm.xml"/>
-        <mapping resource="hibernate/Message.hbm.xml"/>
-        <mapping resource="hibernate/News.hbm.xml"/>
+        <mapping resource="hibernate/Author.hbm.xml"/>
+        <mapping resource="hibernate/Book.hbm.xml"/>
+        <mapping resource="hibernate/Cost.hbm.xml"/>
         <mapping resource="hibernate/Notification.hbm.xml"/>
         <mapping resource="hibernate/User.hbm.xml"/>
         <mapping resource="hibernate/UsersChats.hbm.xml"/>

@@ -3,12 +3,13 @@
         "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class screenadaptationname="items.UsersChats" table="UsersChatsH">
+    <class name ="items.Author" table="Author">
         <meta attribute="class-description">
             This class contains developer's details.
         </meta>
-        <id screenadaptationname="id" type="int" column="id"/>
-        <property screenadaptationname="userId" column="userId" type="int"/>
-        <property screenadaptationname="editionId" column="editionId" type="int"/>
+        <id name="id" type="int" column="id"/>
+        <property name="authorname" column="authorname" type="string"/>
+        <property name="numofBooks" column="numofBooks" type="int"/>
+        <property name="series" column="series" type="int"/>
     </class>
 </hibernate-mapping>
