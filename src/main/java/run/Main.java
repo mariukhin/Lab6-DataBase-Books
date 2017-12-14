@@ -35,6 +35,10 @@ public class Main {
         Liquibase insert = new liquibase.Liquibase(set_data.toString(), new FileSystemResourceAccessor(), database);
         insert.update(new Contexts(), new LabelExpression());
 
+        File delete_all_rows = new File(ClassLoader.getSystemResource("liquibase/db.delete-all-rows.xml").getFile());
+        Liquibase delete = new liquibase.Liquibase(delete_all_rows.toString(), new FileSystemResourceAccessor(), database);
+        delete.update(new Contexts(), new LabelExpression());
+
         AuthorRunner authorRunner = new AuthorRunner(sessionFactory);
         BookRunner bookRunner = new BookRunner(sessionFactory);
         CostRunner costRunner = new CostRunner(sessionFactory);

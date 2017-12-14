@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="liquibase1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/liquibase.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

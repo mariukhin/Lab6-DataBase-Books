@@ -23,16 +23,25 @@ configurations {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'junit:junit:4.12'
     compile 'org.liquibase:liquibase-gradle-plugin:1.1.1'
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
     liquibase 'org.liquibase:liquibase-core:3.2.2'
     compile group: 'org.liquibase', name: 'liquibase-gradle-plugin', version: '1.2.4'
-
+    compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
     compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
     compile 'org.slf4j:slf4j-simple:1.7.9'
     compile group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
+    compile 'com.google.apis:google-api-services-sqladmin:v1beta4-rev48-1.23.0'
+    liquibase 'postgresql:postgresql:9.1-901-1.jdbc4'
+    liquibase 'org.liquibase:liquibase-core:3.2.2'
 
     testCompile 'org.mockito:mockito-all:1.9.5'
     testCompile 'com.github.tomakehurst:wiremock:1.18'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
 }
