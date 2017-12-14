@@ -130,24 +130,5 @@
             <column name="bookId" value="3"></column>
         </insert>
 
-        <insert tableName="NewsH">
-            <column screenadaptationname="id" value="1"></column>
-            <column screenadaptationname="editionId" value="1"></column>
-            <column screenadaptationname="dateOfCreating" value="2014-05-23 19:52:10"></column>
-            <column screenadaptationname="high" value="Шутка про ГБ2"></column>
-        </insert>
-        <insert tableName="NewsH">
-            <column screenadaptationname="id" value="2"></column>
-            <column screenadaptationname="editionId" value="2"></column>
-            <column screenadaptationname="dateOfCreating" value="2015-04-23 19:48:10"></column>
-            <column screenadaptationname="high" value="Голосование за ГБ2"></column>
-        </insert>
-        <insert tableName="NewsH">
-            <column screenadaptationname="id" value="3"></column>
-            <column screenadaptationname="editionId" value="2"></column>
-            <column screenadaptationname="dateOfCreating" value="2016-07-23 15:23:54"></column>
-            <column screenadaptationname="high" value="Олимпиада с математики"></column>
-        </insert>
-
     </changeSet>
 </databaseChangeLog>

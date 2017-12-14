@@ -27,11 +27,11 @@ public class Main {
 
     public static void createTables(SessionFactory sessionFactory) throws ClassNotFoundException, SQLException, LiquibaseException {
         Database database = DatabaseFactory.getInstance().findCorrectDatabaseImplementation(new JdbcConnection(Connect.connection));
-        File create_tables = new File(ClassLoader.getSystemResource("liquibase/1.0-create-tables.xml").getFile());
+        File create_tables = new File(ClassLoader.getSystemResource("liquibase/db.create-tables.xml").getFile());
         Liquibase create = new liquibase.Liquibase(create_tables.toString(), new FileSystemResourceAccessor(), database);
         create.update(new Contexts(), new LabelExpression());
 
-        File set_data = new File(ClassLoader.getSystemResource("liquibase/2.0-set-data.xml").getFile());
+        File set_data = new File(ClassLoader.getSystemResource("liquibase/db.set-data.xml").getFile());
         Liquibase insert = new liquibase.Liquibase(set_data.toString(), new FileSystemResourceAccessor(), database);
         insert.update(new Contexts(), new LabelExpression());
 
