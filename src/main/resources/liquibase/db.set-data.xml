@@ -129,6 +129,12 @@
             <column name="mark" value="7"></column>
             <column name="bookId" value="3"></column>
         </insert>
-
+        <insert tableName="ScreenAdaptationH">
+            <column name="id" value="4"></column>
+            <column name="screenadaptationname" value="The Last of the Mohicans"></column>
+            <column name="year" value="1992"></column>
+            <column name="mark" value="8"></column>
+            <column name="bookId" value="5"></column>
+        </insert>
     </changeSet>
 </databaseChangeLog>

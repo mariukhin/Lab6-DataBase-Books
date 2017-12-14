@@ -23,8 +23,8 @@ public class HibernateTest {
     @Test
     public void createTablesTest() throws SQLException, LiquibaseException, ClassNotFoundException {
         Main.createTables(Main.sessionFactory);
-        ChatRunner chatRunner = new ChatRunner(new Configuration().configure().buildSessionFactory());
-        System.out.println(chatRunner.listChats().get(0).toString());
+        AuthorRunner authorRunner = new AuthorRunner(new Configuration().configure().buildSessionFactory());
+        System.out.println(authorRunner.listAuthors().get(0).toString());
     }
 
     @Test
@@ -34,20 +34,18 @@ public class HibernateTest {
         AuthorRunner authorRunner = new AuthorRunner(new Configuration().configure().buildSessionFactory());
         System.out.println(authorRunner.listAuthors().get(0).toString());
 
-        MessageRunner messageRunner = new MessageRunner(new Configuration().configure().buildSessionFactory());
-        System.out.println(messageRunner.listMessages().get(0).toString());
+        BookRunner bookRunner = new BookRunner(new Configuration().configure().buildSessionFactory());
+        System.out.println(bookRunner.listBooks().get(0).toString());
 
-        NewsRunner newsRunner = new NewsRunner(new Configuration().configure().buildSessionFactory());
-        System.out.println(newsRunner.listNews().get(0).toString());
+        CostRunner costRunner = new CostRunner(new Configuration().configure().buildSessionFactory());
+        System.out.println(costRunner.listCost().get(0).toString());
 
-        NotificationRunner notificationRunner = new NotificationRunner(new Configuration().configure().buildSessionFactory());
-        System.out.println(notificationRunner.listNotes().get(0).toString());
+        EditionRunner editionRunner = new EditionRunner(new Configuration().configure().buildSessionFactory());
+        System.out.println(editionRunner.listEditions().get(0).toString());
 
-        UserRunner userRunner = new UserRunner(new Configuration().configure().buildSessionFactory());
-        System.out.println(userRunner.listUsers().get(0).toString());
+        ScreenAdaptationRunner screenAdaptationRunner = new ScreenAdaptationRunner(new Configuration().configure().buildSessionFactory());
+        System.out.println(screenAdaptationRunner.listScreenAdaptations().get(0).toString());
 
-        UsersChatsRunner usersChatsRunner = new UsersChatsRunner(new Configuration().configure().buildSessionFactory());
-        System.out.println(usersChatsRunner.listUsersChats().get(0).toString());
     }
 
     @Test
