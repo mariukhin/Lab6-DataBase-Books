@@ -66,42 +66,47 @@
             <column name="screenadaptationId" value="4"></column>
         </insert>
 
-        <insert tableName="UsersChatsH">
-            <column screenadaptationname="id" value="1"></column>
-            <column screenadaptationname="userId" value="1"></column>
-            <column screenadaptationname="editionId" value="2"></column>
+        <insert tableName="CostH">
+            <column name="id" value="1"></column>
+            <column name="number" value="150"></column>
+            <column name="high" value="5"></column>
         </insert>
-        <insert tableName="UsersChatsH">
-            <column screenadaptationname="id" value="2"></column>
-            <column screenadaptationname="userId" value="1"></column>
-            <column screenadaptationname="editionId" value="3"></column>
+        <insert tableName="CostH">
+            <column name="id" value="2"></column>
+            <column name="number" value="100"></column>
+            <column name="high" value="4"></column>
         </insert>
-        <insert tableName="UsersChatsH">
-            <column screenadaptationname="id" value="3"></column>
-            <column screenadaptationname="userId" value="3"></column>
-            <column screenadaptationname="editionId" value="1"></column>
+        <insert tableName="CostH">
+            <column name="id" value="3"></column>
+            <column name="number" value="90"></column>
+            <column name="high" value="6"></column>
+        </insert>
+        <insert tableName="CostH">
+            <column name="id" value="4"></column>
+            <column name="number" value="170"></column>
+            <column name="high" value="5"></column>
         </insert>
 
-        <insert tableName="UserMessagesH">
-            <column screenadaptationname="id" value="1"></column>
-            <column screenadaptationname="userId" value="1"></column>
-            <column screenadaptationname="editionId" value="1"></column>
-            <column screenadaptationname="departureDate" value="2014-05-23 19:52:10"></column>
-            <column screenadaptationname="high" value="Привет!"></column>
+        <insert tableName="EditionH">
+            <column name="id" value="1"></column>
+            <column name="editionname" value="Фолио"></column>
+            <column name="numofcopies" value="12807"></column>
+            <column name="bookId" value="2"></column>
+            <column name="costId" value="1"></column>
         </insert>
-        <insert tableName="UserMessagesH">
-            <column screenadaptationname="id" value="2"></column>
-            <column screenadaptationname="userId" value="1"></column>
-            <column screenadaptationname="editionId" value="1"></column>
-            <column screenadaptationname="departureDate" value="2015-04-23 19:48:10"></column>
-            <column screenadaptationname="high" value="Как дела?"></column>
+        <insert tableName="EditionH">
+            <column name="id" value="2"></column>
+            <column name="editionname" value="Азбука"></column>
+            <column name="numofcopies" value="13007"></column>
+            <column name="bookId" value="3"></column>
+            <column name="costId" value="2"></column>
         </insert>
-        <insert tableName="UserMessagesH">
-            <column screenadaptationname="id" value="3"></column>
-            <column screenadaptationname="userId" value="2"></column>
-            <column screenadaptationname="editionId" value="3"></column>
-            <column screenadaptationname="departureDate" value="2016-12-23 13:12:09"></column>
-            <column screenadaptationname="high" value="Норм)))"></column>
+        <insert tableName="EditionH">
+            <column name="id" value="3"></column>
+            <column name="editionname" value="Лениздат"></column>
+            <column name="numofcopies" value="24049"></column>
+            <column name="bookId" value="1"></column>
+            <column name="costId" value="3"></column>
         </insert>
         <insert tableName="UserMessagesH">
             <column screenadaptationname="id" value="4"></column>
@@ -142,22 +147,6 @@
             <column screenadaptationname="editionId" value="2"></column>
             <column screenadaptationname="dateOfCreating" value="2016-07-23 15:23:54"></column>
             <column screenadaptationname="high" value="Олимпиада с математики"></column>
-        </insert>
-
-        <insert tableName="NotificationsH">
-            <column screenadaptationname="id" value="1"></column>
-            <column screenadaptationname="userId" value="2"></column>
-            <column screenadaptationname="high" value="КР с вышки 22.09"></column>
-        </insert>
-        <insert tableName="NotificationsH">
-            <column screenadaptationname="id" value="2"></column>
-            <column screenadaptationname="userId" value="2"></column>
-            <column screenadaptationname="high" value="Лаба СУБД на пятницу"></column>
-        </insert>
-        <insert tableName="NotificationsH">
-            <column screenadaptationname="id" value="3"></column>
-            <column screenadaptationname="userId" value="1"></column>
-            <column screenadaptationname="high" value="Лаба №3 по СП"></column>
         </insert>
 
     </changeSet>
