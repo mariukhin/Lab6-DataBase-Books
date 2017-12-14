@@ -3,14 +3,12 @@ package items;
 public class Cost {
 
     public int id;
-    public int editionId;
     public int num;
     public int high;
 
     public Cost() { }
-    public Cost(int id, int editionId, int num, int high) {
+    public Cost(int id, int num, int high) {
         this.id = id;
-        this.editionId = editionId;
         this.num = num;
         this.high = high;
     }
@@ -21,12 +19,7 @@ public class Cost {
     public void setCostId(int id) {
         this.id = id;
     }
-    public int getEditionId() {
-        return editionId;
-    }
-    public void setEditionId(int editionId) {
-        this.editionId = editionId;
-    }
+
     public int getNum() {
         return num;
     }
@@ -42,8 +35,7 @@ public class Cost {
 
     public boolean equals(Cost cost) {
         boolean bool;
-        if(cost.getCostId() == this.getCostId() && cost.getEditionId() == this.getEditionId() && cost.getNum() == this.getNum()
-                && cost.getHigh() == this.getHigh()) {
+        if(cost.getCostId() == this.getCostId()  && cost.getNum() == this.getNum() && cost.getHigh() == this.getHigh()) {
             bool = true;
         }
         else {
@@ -54,6 +46,6 @@ public class Cost {
 
     @Override
     public String toString() {
-        return String.format("|Id: %d|EditionId: %d|Number: %d|High: %d|", id, editionId, num , high);
+        return String.format("|Id: %d|Number: %d|High: %d|", id, num , high);
     }
 }

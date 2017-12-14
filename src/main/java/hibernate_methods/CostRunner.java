@@ -15,12 +15,12 @@ public class CostRunner {
         this.sessionFactory = sessionFactory;
     }
 
-    public void addCost(int id, int editionId, int num, int high) {
+    public void addCost(int id, int num, int high) {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
 
         transaction = session.beginTransaction();
-        Cost cost = new Cost(id, editionId, num, high);
+        Cost cost = new Cost(id, num, high);
         session.save(cost);
         transaction.commit();
         session.close();

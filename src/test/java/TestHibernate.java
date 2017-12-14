@@ -73,24 +73,24 @@ public class TestHibernate {
     public void addRowTest() throws SQLException, LiquibaseException, ClassNotFoundException {
         Main.createTables(new Configuration().configure().buildSessionFactory());
 
-        ChatRunner chatRunner = new ChatRunner(new Configuration().configure().buildSessionFactory());
-        chatRunner.addChat(4, "Chat1", "2010-05-10");
-        chatRunner.removeChat(4);
+        AuthorRunner authorRunner = new AuthorRunner(new Configuration().configure().buildSessionFactory());
+        authorRunner.addAuthor(5, "Herbert George Wells", 79, 6 );
+        authorRunner.removeAuthor(5);
 
-        NewsRunner newsRunner = new NewsRunner(new Configuration().configure().buildSessionFactory());
-        newsRunner.addNews(4,2,"2010-05-10", "News1");
-        newsRunner.removeNews(4);
+        BookRunner bookRunner = new BookRunner(new Configuration().configure().buildSessionFactory());
+        bookRunner.addBook(5, 2,6,6,"Osceola the Seminole, or, The Red Fawn of the Flower Land", 1858);
+        bookRunner.removeBook(5);
 
-        NotificationRunner notificationRunner = new NotificationRunner(new Configuration().configure().buildSessionFactory());
-        notificationRunner.addNote(4,2,"Note");
-        notificationRunner.removeNote(4);
+        CostRunner costRunner = new CostRunner(new Configuration().configure().buildSessionFactory());
+        costRunner.addCost(5,2,4);
+        costRunner.removeCost(5);
 
-        UserRunner userRunner = new UserRunner(new Configuration().configure().buildSessionFactory());
-        userRunner.addUser(4, "Max", "Shevchuk", 23);
-        userRunner.removeUser(4);
+        EditionRunner editionRunner = new EditionRunner(new Configuration().configure().buildSessionFactory());
+        editionRunner.addEdition(4, 4, 4, "Эксмо",8930);
+        editionRunner.removeEdition(4);
 
-        UsersChatsRunner usersChatsRunner = new UsersChatsRunner(new Configuration().configure().buildSessionFactory());
-        usersChatsRunner.addUsersChats(4,2,1);
-        usersChatsRunner.removeUsersChats(4);
+        ScreenAdaptationRunner screenAdaptationRunner = new ScreenAdaptationRunner(new Configuration().configure().buildSessionFactory());
+        screenAdaptationRunner.addScreenAdaptation(4,"The Last of the Mohicans",1992,8,4);
+        screenAdaptationRunner.removeScreenAdaptation(4);
     }
 }
