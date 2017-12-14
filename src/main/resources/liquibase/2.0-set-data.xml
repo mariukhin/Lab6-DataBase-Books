@@ -108,26 +108,26 @@
             <column name="bookId" value="1"></column>
             <column name="costId" value="3"></column>
         </insert>
-        <insert tableName="UserMessagesH">
-            <column screenadaptationname="id" value="4"></column>
-            <column screenadaptationname="userId" value="1"></column>
-            <column screenadaptationname="editionId" value="3"></column>
-            <column screenadaptationname="departureDate" value="2016-07-23 15:23:54"></column>
-            <column screenadaptationname="high" value="Сделал лабу по СУБД?))"></column>
+        <insert tableName="ScreenAdaptationH">
+            <column name="id" value="1"></column>
+            <column name="screenadaptationname" value="Stalker"></column>
+            <column name="year" value="1979"></column>
+            <column name="mark" value="8"></column>
+            <column name="bookId" value="2"></column>
         </insert>
-        <insert tableName="UserMessagesH">
-            <column screenadaptationname="id" value="5"></column>
-            <column screenadaptationname="userId" value="3"></column>
-            <column screenadaptationname="editionId" value="2"></column>
-            <column screenadaptationname="departureDate" value="2014-06-23 10:34:10"></column>
-            <column screenadaptationname="high" value="Привет, бро)"></column>
+        <insert tableName="ScreenAdaptationH">
+            <column name="id" value="2"></column>
+            <column name="screenadaptationname" value="The Prisoner of Chateau d "></column>
+            <column name="year" value="1988"></column>
+            <column name="mark" value="6"></column>
+            <column name="bookId" value="1"></column>
         </insert>
-        <insert tableName="UserMessagesH">
-            <column screenadaptationname="id" value="6"></column>
-            <column screenadaptationname="userId" value="3"></column>
-            <column screenadaptationname="editionId" value="1"></column>
-            <column screenadaptationname="departureDate" value="2017-05-23 07:44:35"></column>
-            <column screenadaptationname="high" value="Идешь на пару?"></column>
+        <insert tableName="ScreenAdaptationH">
+            <column name="id" value="3"></column>
+            <column name="screenadaptationname" value="The Headless Hourseman"></column>
+            <column name="year" value="1972"></column>
+            <column name="mark" value="7"></column>
+            <column name="bookId" value="3"></column>
         </insert>
 
         <insert tableName="NewsH">
