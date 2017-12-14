@@ -1,4 +1,5 @@
 import hibernate_methods.*;
+import items.Edition;
 import liquibase.exception.LiquibaseException;
 import org.hibernate.cfg.Configuration;
 import org.junit.AfterClass;
@@ -8,7 +9,7 @@ import run.Connect;
 import run.Main;
 import java.sql.SQLException;
 
-public class HibernateTest {
+public class TestHibernate {
 
     @BeforeClass
     public static void onlyOnce() throws SQLException, ClassNotFoundException, LiquibaseException {
@@ -52,23 +53,20 @@ public class HibernateTest {
     public void updateTest() throws SQLException, LiquibaseException, ClassNotFoundException {
         Main.createTables(new Configuration().configure().buildSessionFactory());
 
-        ChatRunner chatRunner = new ChatRunner(new Configuration().configure().buildSessionFactory());
-        chatRunner.updateChat(1, "New Chat");
+        AuthorRunner authorRunner = new AuthorRunner(new Configuration().configure().buildSessionFactory());
+        authorRunner.updateAuthor(1, "Alexandre Dumas");
 
-        NewsRunner newsRunner = new NewsRunner(new Configuration().configure().buildSessionFactory());
-        newsRunner.updateNews(1, "News about KPI...");
+        BookRunner bookRunner = new BookRunner(new Configuration().configure().buildSessionFactory());
+        bookRunner.updateBook(1, "The Count of Monte Cristo");
 
-        MessageRunner messageRunner = new MessageRunner(new Configuration().configure().buildSessionFactory());
-        messageRunner.updateMessage(1, "New Message!");
+        CostRunner costRunner = new CostRunner(new Configuration().configure().buildSessionFactory());
+        costRunner.updateCost(1, 150);
 
-        NotificationRunner notificationRunner = new NotificationRunner(new Configuration().configure().buildSessionFactory());
-        notificationRunner.updateNote(1, "New Notification");
+        EditionRunner editionRunner = new EditionRunner(new Configuration().configure().buildSessionFactory());
+        editionRunner.updateEdition(1, "Фолио");
 
-        UserRunner userRunner = new UserRunner(new Configuration().configure().buildSessionFactory());
-        userRunner.updateUser(1, 25);
-
-        UsersChatsRunner usersChatsRunner = new UsersChatsRunner(new Configuration().configure().buildSessionFactory());
-        usersChatsRunner.updateUsersChats(1, 1);
+        ScreenAdaptationRunner screenAdaptationRunner = new ScreenAdaptationRunner(new Configuration().configure().buildSessionFactory());
+        screenAdaptationRunner.updateScreenAdaptation(1, "Stalker");
     }
 
     @Test
