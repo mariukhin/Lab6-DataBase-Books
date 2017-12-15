@@ -3,31 +3,31 @@ package items;
 public class ScreenAdaptation {
 
     public int id;
-    public String screenadaptationname;
+    public String name;
     public int year;
     public int mark;
     public int bookId;
 
     public ScreenAdaptation() {}
-    public ScreenAdaptation(int id, String screenadaptationname, int year, int mark,int bookId) {
+    public ScreenAdaptation(int id, String name, int year, int mark, int bookId) {
         this.id = id;
-        this.screenadaptationname = screenadaptationname;
+        this.name = name;
         this.year = year;
         this.mark = mark;
         this.bookId = bookId;
     }
 
-    public int getScreenAdaptationId() {
+    public int getId() {
         return id;
     }
-    public void setScreenAdaptationId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
-    public String getScreenadaptationname() {
-        return screenadaptationname;
+    public String getName() {
+        return name;
     }
-    public void setScreenadaptationname(String screenadaptationname) {
-        this.screenadaptationname = screenadaptationname;
+    public void setName(String name) {
+        this.name = name;
     }
     public int getYear() {
         return year;
@@ -50,7 +50,7 @@ public class ScreenAdaptation {
     }
     public boolean equals(ScreenAdaptation screenAdaptation) {
         boolean bool;
-        if(screenAdaptation.getScreenAdaptationId() == this.getScreenAdaptationId() && screenAdaptation.getScreenadaptationname().equals(this.getScreenadaptationname())
+        if(screenAdaptation.getId() == this.getId() && screenAdaptation.getName().equals(this.getName())
                 && screenAdaptation.getYear() == this.getYear() && screenAdaptation.getMark() == this.getMark()&& screenAdaptation.getBookId() == this.getBookId()) {
             bool = true;
         }
@@ -62,6 +62,6 @@ public class ScreenAdaptation {
 
     @Override
     public String toString() {
-        return String.format("|Id: %d|Name: %s|Year: %d|Mark: %d|BookId: %d|", id, screenadaptationname, year, mark, bookId);
+        return String.format("|Id: %d|Name: %s|Year: %d|Mark: %d|BookId: %d|", id, name, year, mark, bookId);
     }
 }

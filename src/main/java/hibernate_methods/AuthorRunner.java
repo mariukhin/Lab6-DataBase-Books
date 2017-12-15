@@ -32,7 +32,7 @@ public class AuthorRunner {
 
         transaction = session.beginTransaction();
         Author author = (Author) session.get(Author.class, id);
-        author.setAuthorName(name);
+        author.setName(name);
         session.update(author);
         transaction.commit();
         session.close();

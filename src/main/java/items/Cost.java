@@ -13,10 +13,10 @@ public class Cost {
         this.high = high;
     }
 
-    public int getCostId() {
+    public int getId() {
         return id;
     }
-    public void setCostId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -35,7 +35,7 @@ public class Cost {
 
     public boolean equals(Cost cost) {
         boolean bool;
-        if(cost.getCostId() == this.getCostId()  && cost.getNum() == this.getNum() && cost.getHigh() == this.getHigh()) {
+        if(cost.getId() == this.getId()  && cost.getNum() == this.getNum() && cost.getHigh() == this.getHigh()) {
             bool = true;
         }
         else {

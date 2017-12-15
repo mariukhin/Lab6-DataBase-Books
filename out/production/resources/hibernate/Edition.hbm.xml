@@ -10,7 +10,7 @@
         <id name="id" type="int" column="id"/>
         <property name="bookId" column="bookId" type="int"/>
         <property name="costId" column="costId" type="int"/>
-        <property name="editionname" column="editionname" type="string"/>
+        <property name="name" column="editionname" type="string"/>
         <property name="numOfCopies" column="numOfCopies" type="int"/>
     </class>
 </hibernate-mapping>

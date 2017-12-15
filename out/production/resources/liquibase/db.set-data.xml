@@ -5,30 +5,30 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
-        logicalFilePath="1.0-create-tables.xml">
+        logicalFilePath="db.set-data.xml">
     <changeSet id="set_data" author="maryuhin.z@gmail.com">
 
         <insert tableName="Author">
             <column name="id" value="1"></column>
-            <column name="authorname" value="Alexandre Dumas"></column>
+            <column name="name" value="Alexandre Dumas"></column>
             <column name="numofbooks" value="80"></column>
             <column name="series" value="4"></column>
         </insert>
         <insert tableName="Author">
             <column name="id" value="2"></column>
-            <column name="authorname" value="Thomas Mayne Reid"></column>
+            <column name="name" value="Thomas Mayne Reid"></column>
             <column name="numofbooks" value="60"></column>
             <column name="series" value="6"></column>
         </insert>
         <insert tableName="Author">
             <column name="id" value="3"></column>
-            <column name="authorname" value="Strugatsky Brothers"></column>
+            <column name="name" value="Strugatsky Brothers"></column>
             <column name="numofbooks" value="24"></column>
             <column name="series" value="5"></column>
         </insert>
         <insert tableName="Author">
             <column name="id" value="4"></column>
-            <column name="authorname" value="James Fenimore Cooper"></column>
+            <column name="name" value="James Fenimore Cooper"></column>
             <column name="numofbooks" value="67"></column>
             <column name="series" value="8"></column>
         </insert>
@@ -38,32 +38,24 @@
             <column name="bookname" value="The Count of Monte Cristo"></column>
             <column name="dateofpublication" value="1844"></column>
             <column name="authorId" value="1"></column>
-            <column name="editionId" value="3"></column>
-            <column name="screenadaptationId" value="2"></column>
         </insert>
-        <insert tableName="BookH">
+        <insert tableName="Book">
             <column name="id" value="2"></column>
             <column name="bookname" value="Roadside Picnic"></column>
             <column name="dateofpublication" value="1972"></column>
             <column name="authorId" value="3"></column>
-            <column name="editionId" value="1"></column>
-            <column name="screenadaptationId" value="1"></column>
         </insert>
         <insert tableName="Book">
             <column name="id" value="3"></column>
             <column name="bookname" value="The Headless Horseman"></column>
             <column name="dateofpublication" value="1865"></column>
             <column name="authorId" value="2"></column>
-            <column name="editionId" value="2"></column>
-            <column name="screenadaptationId" value="3"></column>
         </insert>
         <insert tableName="Book">
             <column name="id" value="4"></column>
             <column name="bookname" value="The Last of the Mohicans"></column>
             <column name="dateofpublication" value="1865"></column>
             <column name="authorId" value="4"></column>
-            <column name="editionId" value="5"></column>
-            <column name="screenadaptationId" value="4"></column>
         </insert>
 
         <insert tableName="Cost">

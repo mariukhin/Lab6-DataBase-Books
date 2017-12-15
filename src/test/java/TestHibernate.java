@@ -18,7 +18,7 @@ public class TestHibernate {
 
     @AfterClass
     public static void afterTest() throws SQLException, ClassNotFoundException {
-        Connect.connection.close();
+        Connect.connect().close();
     }
 
     @Test
@@ -78,7 +78,7 @@ public class TestHibernate {
         authorRunner.removeAuthor(5);
 
         BookRunner bookRunner = new BookRunner(new Configuration().configure().buildSessionFactory());
-        bookRunner.addBook(5, 2,6,6,"Osceola the Seminole, or, The Red Fawn of the Flower Land", 1858);
+        bookRunner.addBook(5, 2,"Osceola the Seminole, or, The Red Fawn of the Flower Land", 1858);
         bookRunner.removeBook(5);
 
         CostRunner costRunner = new CostRunner(new Configuration().configure().buildSessionFactory());

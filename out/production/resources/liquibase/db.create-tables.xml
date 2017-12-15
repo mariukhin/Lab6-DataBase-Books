@@ -5,13 +5,13 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
-        logicalFilePath="1.0-create-tables.xml">
+        logicalFilePath="db.create-tables.xml">
     <changeSet id="create_tables" author="maryuhin.z@gmail.com">
         <createTable tableName ="Author">
             <column autoIncrement = "true" name = "id" type ="INTEGER">
                 <constraints nullable="false" primaryKey="true"></constraints>
             </column>
-            <column name="authorname" type="VARCHAR(255)">
+            <column name="name" type="VARCHAR(255)">
                 <constraints nullable="false"></constraints>
             </column>
             <column name="numofbooks" type="INTEGER">
@@ -32,12 +32,6 @@
                 <constraints nullable="false"></constraints>
             </column>
             <column name = "authorId" type="INTEGER" >
-                <constraints nullable="false"></constraints>
-            </column>
-            <column name = "editionId" type="INTEGER" >
-                <constraints nullable="false"></constraints>
-            </column>
-            <column name = "screenadaptationId" type="INTEGER" >
                 <constraints nullable="false"></constraints>
             </column>
         </createTable>
@@ -90,7 +84,7 @@
             CREATE TABLE public."AuthorH"
             (
             Id integer NOT NULL,
-            "authorname" character varying NOT NULL,
+            "name" character varying NOT NULL,
             "numofbooks" integer,
             "series" integer NOT NULL,
             CONSTRAINT "author_pkey" PRIMARY KEY (Id)

@@ -5,14 +5,14 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
-        logicalFilePath="4.0-delete_all_rows.xml">
+        logicalFilePath="db.delete-all-rows.xml">
     <changeSet id="delete_all_rows" author="maryuhin.z@gmail.com">
         <sql>
-            DELETE FROM Author;
-            DELETE FROM Book;
-            DELETE FROM Cost;
-            DELETE FROM Edition;
-            DELETE FROM ScreenAdaptation;
+            TRUNCATE FROM Author;
+            TRUNCATE FROM Book;
+            TRUNCATE FROM Cost;
+            TRUNCATE FROM Edition;
+            TRUNCATE FROM ScreenAdaptation;
         </sql>
     </changeSet>
 </databaseChangeLog>

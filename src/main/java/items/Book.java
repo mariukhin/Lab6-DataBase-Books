@@ -4,25 +4,21 @@ public class Book {
 
     public int id;
     public int authorId;
-    public int editionId;
-    public int screenadaptId;
-    public String bookName;
+    public String name;
     public int dateR;
 
     public Book() {}
-    public Book(int id, int authorId, int editionId, int screenadaptId, String bookName, int dateR) {
+    public Book(int id, int authorId, String name, int dateR) {
         this.id = id;
         this.authorId = authorId;
-        this.editionId = editionId;
-        this.screenadaptId = screenadaptId;
-        this.bookName = bookName;
+        this.name = name;
         this.dateR = dateR;
     }
 
-    public int getBookId() {
+    public int getId() {
         return id;
     }
-    public void setBookId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
     public int getAuthorId() {
@@ -31,23 +27,11 @@ public class Book {
     public void setAuthorId(int authorId) {
         this.authorId = authorId;
     }
-    public int getEditionId() {
-        return editionId;
-    }
-    public void setEditionId(int editionId) {
-        this.editionId = editionId;
-    }
-    public int getScreenAdaptationId() {
-        return screenadaptId;
-    }
-    public void setScreenAdaptationId(int screenadaptId) {
-        this.screenadaptId = screenadaptId;
-    }
     public String getName() {
-        return bookName;
+        return name;
     }
-    public void setName(String bookName) {
-        this.bookName = bookName;
+    public void setName(String name) {
+        this.name = name;
     }
     public int getDateR() {
         return dateR;
@@ -58,8 +42,7 @@ public class Book {
 
     public boolean equals(Book book) {
         boolean bool;
-        if(book.getBookId() == this.getBookId() && book.getAuthorId() == this.getAuthorId() && book.getEditionId() == this.getEditionId()
-                && book.getScreenAdaptationId() == this.getScreenAdaptationId() && book.getName().equals(this.getName())
+        if(book.getId() == this.getId() && book.getAuthorId() == this.getAuthorId()  && book.getName().equals(this.getName())
                 && book.getDateR() == this.getDateR()) {
             bool = true;
         }
@@ -71,6 +54,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return String.format("|Id: %d|Name: %s|AuthorId: %d|DateR: %d|", id, bookName, authorId, dateR);
+        return String.format("|Id: %d|Name: %s|AuthorId: %d|DateR: %d|", id, name, authorId, dateR);
     }
 }

@@ -9,9 +9,7 @@
         </meta>
         <id name="id" type="int" column="id"/>
         <property name="authorId" column="authorId" type="int"/>
-        <property name="editionId" column="editionId" type="int"/>
-        <property name="screenadaptId" column="screenadaptId" type="int"/>
-        <property name="bookName" column="bookName" type="string"/>
-        <property name="dateR" column="dateR" type="int"/>
+        <property name="name" column="bookname" type="string"/>
+        <property name="dateR" column="dateofpublication" type="int"/>
     </class>
 </hibernate-mapping>

@@ -15,12 +15,12 @@ public class BookRunner {
         this.sessionFactory = sessionFactory;
     }
 
-    public void addBook(int id, int authorId, int editionId, int screenadaptId, String bookName, int dateR) {
+    public void addBook(int id, int authorId, String bookName, int dateR) {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
 
         transaction = session.beginTransaction();
-        Book book = new Book(id, authorId, editionId, screenadaptId, bookName, dateR);
+        Book book = new Book(id, authorId, bookName, dateR);
         session.save(book);
         transaction.commit();
         session.close();

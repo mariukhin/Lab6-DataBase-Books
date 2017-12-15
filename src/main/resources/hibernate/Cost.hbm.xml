@@ -8,8 +8,7 @@
             This class contains developer's details.
         </meta>
         <id name="id" type="int" column="id"/>
-        <property name="editionId" column="editionId" type="int"/>
-        <property name="num" column="num" type="int"/>
+        <property name="num" column="number" type="int"/>
         <property name="high" column="high" type="int"/>
     </class>
 </hibernate-mapping>

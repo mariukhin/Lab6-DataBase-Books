@@ -33,7 +33,7 @@ public class ScreenAdaptationRunner {
 
         transaction = session.beginTransaction();
         ScreenAdaptation screenAdaptation = (ScreenAdaptation) session.get(ScreenAdaptation.class, id);
-        screenAdaptation.setScreenadaptationname(screenadaptationname);
+        screenAdaptation.setName(screenadaptationname);
         session.update(screenAdaptation);
         transaction.commit();
         session.close();

@@ -31,7 +31,7 @@ public class EditionRunner {
 
         transaction = session.beginTransaction();
         Edition edition = (Edition) session.get(Edition.class, id);
-        edition.setEditionname(editionname);
+        edition.setName(editionname);
         session.update(edition);
         transaction.commit();
         session.close();
